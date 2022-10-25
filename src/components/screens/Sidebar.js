@@ -9,7 +9,7 @@ function Sidebar() {
    <Container>
       <ProfileContainer>
         <Logo src={image1}/>
-        <H4>MAIN CONTAINER</H4>
+        <H4>MAINCONTAINER</H4>
         <Links>
                     <Link>
                         <Akar src={image2}/>
@@ -17,7 +17,7 @@ function Sidebar() {
                     </Link>
                     <Link>
                         <Catering src={require("../../Assets/cake.svg").default}/>
-                        <H3>Catering</H3>
+                        <H3>Catering status</H3>
                     </Link>
                     <Link>
                         <Traffic src={require("../../Assets/bx.svg").default}/>
@@ -29,8 +29,29 @@ function Sidebar() {
                     </Link>
                  
                 </Links>
+       
         
       </ProfileContainer>
+      <Settings>
+    
+        <H4>SETTINGS</H4>
+        <Links>
+                    <Link>
+                        <Akar src={require("../../Assets/account.svg").default}/>
+                        <H3>Account</H3>
+                    </Link>
+                    <Link>
+                        <Catering src={require("../../Assets/wallet.svg").default}/>
+                        <H3>Wallet</H3>
+                    </Link>
+                    <Link>
+                        <Traffic src={require("../../Assets/help.svg").default}/>
+                        <H3>Help & Support</H3>
+                    </Link>
+                    
+                 
+                </Links>
+      </Settings>
    </Container>
   )
 }
@@ -53,16 +74,17 @@ const ProfileContainer = styled.div`
     align-items: center;
 `;
 const Logo = styled.img`
-      height: 5rem;
-   width: 50%;
+      
+   width: 70%;
    margin: 0 auto;
    border-radius: 50%;
-   margin-top: 15px;
-   margin-left: 30px;
+   margin-top: 65px;
+   margin-left: 35px;
    margin-bottom: 20%;
 `;
 const Links = styled.ul`
     list-style: none;
+    line-height: 3em;
     
 `;
 const Link = styled.li`
@@ -70,27 +92,35 @@ const Link = styled.li`
     
 `;
 const Akar = styled.img`
-     width: 10%;
+     width: 15%;
     margin-right: 10px;
 
 `;
 const Catering = styled.img`
-     width: 10%;
+     width: 15%;
     margin-right: 10px;
 
-`;
-const Traffic = styled.img`
-     width: 10%;
+`;const Traffic = styled.img`
+     width: 15%;
     margin-right: 10px;
 `;
 const Reward = styled.img`
-     width: 10%;
+     width: 15%;
     margin-right: 10px;
 `;
 const H3 = styled.div``;
 
 const H4 = styled.div`
+    width: 60%;
+    font-weight: bold;
+    color: grey;
 
+`;
+const Settings = styled.div`
+display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
 `;
 
 
