@@ -2,24 +2,25 @@ import React from 'react'
 import styled from "styled-components"
 
 import image1 from "../../Assets/Logo.svg"
+import image2 from "../../Assets/akar.svg"
 
 function Sidebar() {
   return (
    <Container>
       <ProfileContainer>
         <Logo src={image1}/>
-        <h2>MAIN CONTAINER</h2>
+        <H4>MAIN CONTAINER</H4>
         <Links>
                     <Link>
-                        <Akar src={require("../../Assets/akar.svg").default}/>
+                        <Akar src={image2}/>
                         <H3>Dasboard</H3>
                     </Link>
                     <Link>
-                        <Catering src={require("../../Assets/ant.svg").default}/>
+                        <Catering src={require("../../Assets/cake.svg").default}/>
                         <H3>Catering</H3>
                     </Link>
                     <Link>
-                        <Traffic src={require("../../Assets/ant.svg").default}/>
+                        <Traffic src={require("../../Assets/bx.svg").default}/>
                         <H3>Guest traffic</H3>
                     </Link>
                     <Link>
@@ -36,21 +37,60 @@ function Sidebar() {
 
 export default Sidebar
 
-const Container = styled.div``;
-const ProfileContainer = styled.div``;
-const Logo = styled.img``;
-const Links = styled.div``;
-const Link = styled.div``;
+const Container = styled.div`
+   width:15%;
+   height: 100% !important;
+   border-radius: 2rem;
+   display: flex;
+   flex-direction: column;
+    align-items: center;
+`;
+
+const ProfileContainer = styled.div`
+     display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+`;
+const Logo = styled.img`
+      height: 5rem;
+   width: 50%;
+   margin: 0 auto;
+   border-radius: 50%;
+   margin-top: 15px;
+   margin-left: 30px;
+   margin-bottom: 20%;
+`;
+const Links = styled.ul`
+    list-style: none;
+    
+`;
+const Link = styled.li`
+ display: flex;
+    
+`;
 const Akar = styled.img`
-    width: 100px;
-    height: 100px;
+     width: 10%;
+    margin-right: 10px;
 
 `;
-const Catering = styled.img``;
-const Traffic = styled.img``;
-const Reward = styled.img``;
+const Catering = styled.img`
+     width: 10%;
+    margin-right: 10px;
+
+`;
+const Traffic = styled.img`
+     width: 10%;
+    margin-right: 10px;
+`;
+const Reward = styled.img`
+     width: 10%;
+    margin-right: 10px;
+`;
 const H3 = styled.div``;
 
+const H4 = styled.div`
 
+`;
 
 
