@@ -1,31 +1,32 @@
 import React from 'react'
 import styled from "styled-components"
 
+import image1 from "../../Assets/Logo.svg"
+
 function Sidebar() {
   return (
    <Container>
       <ProfileContainer>
-        <Logo src={require("../../Assets/Logo.svg")}/>
+        <Logo src={image1}/>
         <h2>MAIN CONTAINER</h2>
         <Links>
                     <Link>
-                        <Trofi src={require("").default}/>
-                        <h3>Dasboard</h3>
+                        <Akar src={require("../../Assets/akar.svg").default}/>
+                        <H3>Dasboard</H3>
                     </Link>
                     <Link>
-                        <Calender src={require("").default}/>
-                        <h3>Catering</h3>
+                        <Catering src={require("../../Assets/ant.svg").default}/>
+                        <H3>Catering</H3>
                     </Link>
                     <Link>
-                        <Technology src={require("").default}/>
-                        <h3>Guest traffic</h3>
+                        <Traffic src={require("../../Assets/ant.svg").default}/>
+                        <H3>Guest traffic</H3>
                     </Link>
                     <Link>
-                        <Reward src={require("").default}/>
-                        <h3>Gifts</h3>
+                        <Reward src={require("../../Assets/ant.svg").default}/>
+                        <H3>Gifts</H3>
                     </Link>
-                    <Link>
-                       
+                 
                 </Links>
         
       </ProfileContainer>
@@ -33,17 +34,23 @@ function Sidebar() {
   )
 }
 
+export default Sidebar
 
 const Container = styled.div``;
 const ProfileContainer = styled.div``;
 const Logo = styled.img``;
 const Links = styled.div``;
 const Link = styled.div``;
-const Trofi = styled.div``;
-const Calender = styled.div``;
-const Technology = styled.div``;
-const Reward = styled.div``;
+const Akar = styled.img`
+    width: 100px;
+    height: 100px;
+
+`;
+const Catering = styled.img``;
+const Traffic = styled.img``;
+const Reward = styled.img``;
+const H3 = styled.div``;
 
 
 
-export default Sidebar
+
