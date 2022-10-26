@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from "styled-components"
 
-import image1 from "../../Assets/Logo.svg"
+// import image1 from "../../Assets/Logo.svg"
 import image2 from "../../Assets/akar.svg"
 
 function Sidebar() {
   return (
    <Container>
       <ProfileContainer>
-        <Logo src={image1}/>
+        {/* <Logo src={image1}/> */}
         <H4>MAINCONTAINER</H4>
         <Links>
                     <Link>
@@ -56,7 +56,7 @@ function Sidebar() {
   )
 }
 
-export default Sidebar
+export default Sidebar;
 
 const Container = styled.div`
    width:15%;
@@ -73,31 +73,31 @@ const ProfileContainer = styled.div`
     flex-direction: column;
     align-items: center;
 `;
-const Logo = styled.img`
+// const Logo = styled.img`
       
-   width: 70%;
-   margin: 0 auto;
-   border-radius: 50%;
-   margin-top: 65px;
-   margin-left: 35px;
-   margin-bottom: 20%;
-`;
+//    width: 70%;
+//    margin: 0 auto;
+//    border-radius: 50%;
+//    margin-top: 65px;
+//    margin-left: 35px;
+//    margin-bottom: 20%;
+// `;
 const Links = styled.ul`
     list-style: none;
     line-height: 3em;
     
 `;
 const Link = styled.li`
- display: flex;
+    display: flex;
     
 `;
 const Akar = styled.img`
-     width: 15%;
+    width: 15%;
     margin-right: 10px;
 
 `;
 const Catering = styled.img`
-     width: 15%;
+    width: 15%;
     margin-right: 10px;
 
 `;const Traffic = styled.img`
@@ -105,7 +105,7 @@ const Catering = styled.img`
     margin-right: 10px;
 `;
 const Reward = styled.img`
-     width: 15%;
+    width: 15%;
     margin-right: 10px;
 `;
 const H3 = styled.div``;
@@ -117,7 +117,7 @@ const H4 = styled.div`
 
 `;
 const Settings = styled.div`
-display: flex;
+    display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
