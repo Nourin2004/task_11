@@ -9,7 +9,7 @@ function Sidebar() {
    <Container>
       <ProfileContainer>
         {/* <Logo src={image1}/> */}
-        <H4>MAINCONTAINER</H4>
+        <H4>MAIN MENU</H4>
         <Links>
                     <Link>
                         <Akar src={image2}/>

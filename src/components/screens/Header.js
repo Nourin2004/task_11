@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import image1 from "../../Assets/Logo.svg"
+// import {Link} from "react-router-dom"
 function Header() {
     return (
         <>
@@ -11,34 +12,110 @@ function Header() {
                     </HeaderImage>
                 
                     <LeftContainer>
-                        <OverView> Overview</OverView>
-                        <Guest>Guestlist</Guest>
-                        <Traffic>Temporary traffic</Traffic>
+                        <HeaderLi>
+                            <OverView> Overview</OverView>
+                        </HeaderLi>
+                        <HeaderLi>
+                            <Guest>Guestlist</Guest>
+                        </HeaderLi>
+                        <HeaderLi>
+                            <Traffic>Temporary traffic</Traffic>
+                        </HeaderLi>
                     </LeftContainer>
+                 </HeaderContainer>
+                 <HeaderImageContainer>
                     <RightContainer>
+                      
                         <ImageContainer src={require("../../Assets/bxs_bell.svg").default} />
+                     
+                       
                         <ImageContainer2 src={require("../../Assets/Rect 20695.jpg")}/>
+                        
                     </RightContainer>
-                </HeaderContainer>
+                 </HeaderImageContainer>
+             
+            
             </Container>
         </>
     );
 }
 export default Header;
 
-const Container = styled.div`
-    
+const Container = styled.header`
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: 0 auto;
+  align-items: center;
+  padding-top: 0px;
+  margin-top: 70px;
 `;
-const OverView = styled.div``;
-const Guest = styled.div``;
-const Traffic = styled.div``;
-const LeftContainer = styled.div``;
+
+// const HeaderContainer = styled.div``;
+// const HeaderImage = styled.div``;
+const HeaderLi = styled.li`
+ margin-right: 30px;
+`;
+const HeaderImageContainer = styled.ul`
+  justify-content: space-between;
+  display: flex;
+  list-style: none;
+`;
+const OverView = styled.div`
+     font-size: 17px;
+    font-weight: normal;
+    color: #8D8989;
+    &:hover{
+      color: #000;
+      border-bottom: 2px solid #000;
+    }
+`;
+const Guest = styled.div`
+     font-size: 17px;
+    font-weight: normal;
+    color: #8D8989;
+    &:hover{
+      color: #000;
+      border-bottom: 2px solid #000;
+    }
+`;
+const Traffic = styled.div`
+     font-size: 17px;
+    font-weight: normal;
+    color: #8D8989;
+    &:hover{
+      color: #000;
+      border-bottom: 2px solid #000;
+    }
+`;
+const LeftContainer = styled.ul`
+  list-style: none;
+  display: flex;
+  padding: 0;
+  width: 100%;
+  margin-left: 30px;
+`;
 const HeaderImage = styled.div``;
 const Logo = styled.img``;
-const RightContainer = styled.div``;
-const HeaderContainer = styled.div``;
-const ImageContainer = styled.img``;
-const ImageContainer2 = styled.img`
-    width: 10%;
-    border-radius: 50%;
+const RightContainer = styled.div`
+     width: 40px;
+     display: flex; 
+     justify-content: space-between; 
+  margin-left: 10px;
 `;
+const HeaderContainer = styled.h1`
+    margin: 0;
+  display: flex;
+`;
+const ImageContainer = styled.img`
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+`;
+const ImageContainer2 = styled.img`
+display: block;
+  width: 100%;
+  border-radius: 50%;
+ 
+`;
+
