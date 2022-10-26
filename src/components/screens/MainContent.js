@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+// import Profiles from "./Profiles";
 
 function MainContent() {
     return (
@@ -100,7 +101,7 @@ const TopContainer = styled.section`
 const DivOne = styled.div`
     background-color: #A5E3E3;
     width:34%;
-    padding: 40px;
+    padding: 30px;
     border-radius: 18px;
 `;
 const MGuest = styled.div`
@@ -136,7 +137,7 @@ const MH4 = styled.h4`
     font-weight: bold;
 `;
 const MH1 = styled.h1`
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
     margin-top: 20px;
     color: #000;
@@ -145,7 +146,7 @@ const MRight = styled.div``;
 const DivTwo = styled.div`
     background-color: #D2A2F7;
     width: 34%;
-    padding: 40px;
+    padding: 32px;
     border-radius: 18px;
 `;
 const FGuest = styled.div`
@@ -186,13 +187,13 @@ const FH4 = styled.h4`
     font-weight: bold;
 `;
 const FH1 = styled.div`
-    font-size: 30px;
+    font-size: 40px;
     font-weight: bold;
     color: #000;
 `;
 const HR = styled.hr`
     border-right: 2px solid #000;
-    height: 50px;
+    height: 75px;
     
 `;
 const FRight = styled.div``;
