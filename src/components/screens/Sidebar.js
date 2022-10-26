@@ -59,7 +59,7 @@ function Sidebar() {
 export default Sidebar;
 
 const Container = styled.div`
-   width:15%;
+   width:20%;
    height: 100% !important;
    border-radius: 2rem;
    display: flex;

@@ -9,7 +9,7 @@ function MainContent() {
                     <DivOne>
                         <MGuest>
                             <MGuestImage>
-                                <MIconImage></MIconImage>
+                                <MIconImage src={require("../../Assets/white icon.svg").default}/>
                             </MGuestImage>
                             <MaleGuest>Male Guest</MaleGuest>
                         </MGuest>
@@ -30,7 +30,7 @@ function MainContent() {
                     <DivTwo>
                         <FGuest>
                             <FGuestImage>
-                                <FIconImage></FIconImage>
+                                <FIconImage src={require("../../Assets/white icon2.svg").default}/>
                             </FGuestImage>
                             <FemaleGuest>Female Guest</FemaleGuest>
                         </FGuest>
@@ -49,20 +49,22 @@ function MainContent() {
                     </DivTwo>
                     <DivThree>
                         <TrafficH4>
+                        <VisitorTraffic>Visitor Traffic</VisitorTraffic>
                             <TrafficDiv>
-                                <TrafficImage />
+                                <TrafficImage src={require("../../Assets/Group 3465418.svg").default}/>
                             </TrafficDiv>
+                            
                         </TrafficH4>
                     </DivThree>
                 </TopContainer>
                 <Seemore>
                     <SeeRight>
                         <SH5>Recently Guest</SH5>
-                        <SH6>See more</SH6>
+                        <See6>See more</See6>
                     </SeeRight>
                     <SeeLeft>
                         <SH5>Guest Traffic</SH5>
-                        <SeeH6>See more</SeeH6>
+                        <See6>See more</See6>
                     </SeeLeft>
                 </Seemore>
 
@@ -88,7 +90,7 @@ export default MainContent;
 
 const SpotContainer = styled.section`
     background: #f5f1f1;
-    width: 80%;
+    width: 90%;
     padding: 25px;
 `;
 const TopContainer = styled.section`
@@ -97,17 +99,17 @@ const TopContainer = styled.section`
 `;
 const DivOne = styled.div`
     background-color: #A5E3E3;
-    width: 39%;
+    width:34%;
     padding: 40px;
     border-radius: 18px;
 `;
 const MGuest = styled.div`
-        display: flex;
+    display: flex;
     align-items: center;
     margin-bottom: 15px;
 `;
 const MGuestImage = styled.span`
-     border-radius: 50%;
+    border-radius: 50%;
     padding: 10px;
     width: 40px;
     background: #000;
@@ -118,7 +120,7 @@ const MIconImage = styled.img`
     width: 100%; 
 `;
 const MaleGuest = styled.h3`
-     font-size: 18px;
+    font-size: 18px;
     font-weight: bold;
     margin-left: 10px;
     color: #000;
@@ -130,18 +132,19 @@ const MInvites = styled.section`
 const MLeft = styled.div``;
 const MH4 = styled.h4`
     font-size: 12px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     font-weight: bold;
 `;
 const MH1 = styled.h1`
-    font-size: 45px;
+    font-size: 30px;
     font-weight: bold;
+    margin-top: 20px;
     color: #000;
 `;
 const MRight = styled.div``;
 const DivTwo = styled.div`
     background-color: #D2A2F7;
-    width: 39%;
+    width: 34%;
     padding: 40px;
     border-radius: 18px;
 `;
@@ -158,7 +161,7 @@ const FGuestImage = styled.span`
     display: inline-block;
     `;
 const FIconImage = styled.img`
-   display: block;
+    display: block;
     width: 100%;`;
 const FemaleGuest = styled.h3`
     font-size: 18px;
@@ -166,8 +169,14 @@ const FemaleGuest = styled.h3`
     margin-left: 10px;
     color: #000;
 `;
+const VisitorTraffic = styled.h3`
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: #000;
+`;
 const FInvites = styled.div`
-     display: flex;
+    display: flex;
     justify-content: space-between;
 `;
 const FLeft = styled.div``;
@@ -177,21 +186,59 @@ const FH4 = styled.h4`
     font-weight: bold;
 `;
 const FH1 = styled.div`
-    font-size: 45px;
+    font-size: 30px;
     font-weight: bold;
     color: #000;
 `;
 const HR = styled.hr`
-    border-right: 1px solid #000;
+    border-right: 2px solid #000;
+    height: 50px;
+    
 `;
 const FRight = styled.div``;
-const DivThree = styled.div``;
-const TrafficH4 = styled.div``;
-const TrafficDiv = styled.div``;
-const TrafficImage = styled.div``;
-const Seemore = styled.div``;
-const SeeRight = styled.div``;
-const SH5 = styled.div``;
-const SH6 = styled.div``;
-const SeeLeft = styled.div``;
-const SeeH6 = styled.div``;
+const DivThree = styled.div`
+    width: 14%;
+    background-color: #fff;
+    border-radius: 15px;
+
+`;
+const TrafficH4 = styled.h4`
+     font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+`;
+const TrafficDiv = styled.div`
+   
+`;
+const TrafficImage = styled.img`
+    display: block;
+    width: 100%;
+`;
+const Seemore = styled.section`
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+`;
+const SeeRight = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 38%;`;
+const SH5 = styled.h5`
+    font-size: 18px;
+    color: #000;
+    font-weight: 500;
+`;
+const SeeLeft = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 55%;
+`;
+const See6 = styled.h6`
+    font-size: 12px;
+    color: grey;
+    font-weight: 700;
+`;

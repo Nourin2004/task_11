@@ -96,7 +96,9 @@ const LeftContainer = styled.ul`
   margin-left: 30px;
 `;
 const HeaderImage = styled.div``;
-const Logo = styled.img``;
+const Logo = styled.img`
+    width: 100%;
+`;
 const RightContainer = styled.div`
      width: 40px;
      display: flex; 
