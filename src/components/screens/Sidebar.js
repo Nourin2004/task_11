@@ -11,10 +11,10 @@ function Sidebar() {
         {/* <Logo src={image1}/> */}
         <H4>MAIN MENU</H4>
         <Links>
-                    <Link>
+                    <Link1>
                         <Akar src={image2}/>
                         <H3>Dasboard</H3>
-                    </Link>
+                    </Link1>
                     <Link>
                         <Catering src={require("../../Assets/cake.svg").default}/>
                         <H3>Catering status</H3>
@@ -85,10 +85,24 @@ const ProfileContainer = styled.div`
 const Links = styled.ul`
     list-style: none;
     line-height: 3em;
-    
+  
+`;
+
+const Link1 = styled.li`
+    display: flex;
+    font-size: 17px;
+    font-weight: normal;
 `;
 const Link = styled.li`
     display: flex;
+    font-size: 17px;
+    font-weight: normal;
+    color: #8D8989;
+    &:hover{
+      color: #000;
+      
+    }
+    
     
 `;
 const Akar = styled.img`

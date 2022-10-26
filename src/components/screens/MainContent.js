@@ -18,14 +18,14 @@ function MainContent() {
                                 <MH4>Total invites</MH4>
                                 <MH1>8,124</MH1>
                             </MLeft>
-                        </MInvites>
+                      
                         <HR />
-                        <MCome>
+                     
                             <MRight>
                                 <MH4>Total Come</MH4>
                                 <MH1>4,204</MH1>
                             </MRight>
-                        </MCome>
+                       </MInvites>
                     </DivOne>
                     <DivTwo>
                         <FGuest>
@@ -39,14 +39,13 @@ function MainContent() {
                                 <FH4>Total invites</FH4>
                                 <FH1>9,620</FH1>
                             </FLeft>
-                        </FInvites>
+                        
                         <HR />
-                        <FCome>
                             <FRight>
                                 <FH4>Total Come</FH4>
                                 <FH1>6,125</FH1>
                             </FRight>
-                        </FCome>
+                            </FInvites>
                     </DivTwo>
                     <DivThree>
                         <TrafficH4>
@@ -87,31 +86,104 @@ export default MainContent;
 // }
 // export default MainContent;
 
-const SpotContainer = styled.div``;
-const TopContainer = styled.div``;
-const DivOne = styled.div``;
-const MGuest = styled.div``;
-const MGuestImage = styled.div``;
-const MIconImage = styled.div``;
-const MaleGuest = styled.div``;
-const MInvites = styled.div``;
+const SpotContainer = styled.section`
+    background: #f5f1f1;
+    width: 80%;
+    padding: 25px;
+`;
+const TopContainer = styled.section`
+    display: flex;
+    justify-content: space-between;
+`;
+const DivOne = styled.div`
+    background-color: #A5E3E3;
+    width: 39%;
+    padding: 40px;
+    border-radius: 18px;
+`;
+const MGuest = styled.div`
+        display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+`;
+const MGuestImage = styled.span`
+     border-radius: 50%;
+    padding: 10px;
+    width: 40px;
+    background: #000;
+    display: inline-block;
+`;
+const MIconImage = styled.img`
+    display: block;
+    width: 100%; 
+`;
+const MaleGuest = styled.h3`
+     font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: #000;
+`;
+const MInvites = styled.section`
+    display: flex;
+    justify-content: space-between;
+`;
 const MLeft = styled.div``;
-const MH4 = styled.div``;
-const MH1 = styled.div``;
-// const HR= styled.div``;
-const MCome = styled.div``;
+const MH4 = styled.h4`
+    font-size: 12px;
+    margin-top: 10px;
+    font-weight: bold;
+`;
+const MH1 = styled.h1`
+    font-size: 45px;
+    font-weight: bold;
+    color: #000;
+`;
 const MRight = styled.div``;
-const DivTwo = styled.div``;
-const FGuest = styled.div``;
-const FGuestImage = styled.div``;
-const FIconImage = styled.div``;
-const FemaleGuest = styled.div``;
-const FInvites = styled.div``;
+const DivTwo = styled.div`
+    background-color: #D2A2F7;
+    width: 39%;
+    padding: 40px;
+    border-radius: 18px;
+`;
+const FGuest = styled.div`
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+`;
+const FGuestImage = styled.span`
+    border-radius: 50%;
+    padding: 10px;
+    width: 40px;
+    background: #000;
+    display: inline-block;
+    `;
+const FIconImage = styled.img`
+   display: block;
+    width: 100%;`;
+const FemaleGuest = styled.h3`
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: #000;
+`;
+const FInvites = styled.div`
+     display: flex;
+    justify-content: space-between;
+`;
 const FLeft = styled.div``;
-const FH4 = styled.div``;
-const FH1 = styled.div``;
-const HR = styled.div``;
-const FCome = styled.div``;
+const FH4 = styled.h4`
+    font-size: 12px;
+    margin-top: 10px;
+    font-weight: bold;
+`;
+const FH1 = styled.div`
+    font-size: 45px;
+    font-weight: bold;
+    color: #000;
+`;
+const HR = styled.hr`
+    border-right: 1px solid #000;
+`;
 const FRight = styled.div``;
 const DivThree = styled.div``;
 const TrafficH4 = styled.div``;
