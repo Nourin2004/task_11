@@ -93,11 +93,13 @@ const LeftContainer = styled.ul`
   display: flex;
   padding: 0;
   width: 100%;
-  margin-left: 30px;
+  margin-left: 110px;
 `;
 const HeaderImage = styled.div``;
 const Logo = styled.img`
     width: 100%;
+    margin-top: 20px;
+    margin-left: 30px;
 `;
 const RightContainer = styled.div`
      width: 40px;

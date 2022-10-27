@@ -60,8 +60,8 @@ function Profiledata() {
                                 <ProImage3 src={Avatar} />
                             </ProfileImage3>
                             <ProfileThreeName>
-                                <ProThreeInput type={"text"} value={"ACak Handoko"} />
-                                <ProfileThreeP>6 minute ago</ProfileThreeP>
+                                <ProThreeInput type={"text"} value={"Aisyah Namanya"} />
+                                <ProfileThreeP>2 minute ago</ProfileThreeP>
                             </ProfileThreeName>
                         </ProfileLeft3>
                         <ProfileRight3>

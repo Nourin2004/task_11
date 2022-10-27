@@ -220,7 +220,7 @@ const Seemore = styled.section`
      display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 `;
 const SeeRight = styled.div`
     display: flex;
@@ -228,9 +228,10 @@ const SeeRight = styled.div`
     align-items: center;
     width: 38%;`;
 const SH5 = styled.h5`
-    font-size: 18px;
+ font-size: 27px;
     color: #000;
     font-weight: 500;
+    margin: 0 10px;
 `;
 const SeeLeft = styled.div`
     display: flex;
@@ -239,7 +240,7 @@ const SeeLeft = styled.div`
     width: 55%;
 `;
 const See6 = styled.h6`
-    font-size: 12px;
+    font-size: 20px;
     color: grey;
-    font-weight: 700;
+    font-weight: 500;
 `;

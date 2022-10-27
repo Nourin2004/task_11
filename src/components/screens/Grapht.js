@@ -108,8 +108,8 @@ export default function Grapht() {
 }
 
 const GraphContainer = styled.section`
-    width: 57%;
-    margin-top: 35px;
+    width: 56%;
+    margin-top: 17px;
     background-color: #fff;
     border-radius: 20px;
     text-align: center;

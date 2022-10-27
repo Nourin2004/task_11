@@ -84,7 +84,7 @@ const ProfileContainer = styled.div`
 // `;
 const Links = styled.ul`
     list-style: none;
-    line-height: 3em;
+    line-height: 4em;
   
 `;
 
@@ -100,6 +100,7 @@ const Link = styled.li`
     color: #8D8989;
     &:hover{
       color: #000;
+      font-weight: 500;
       
     }
     
@@ -128,6 +129,8 @@ const H4 = styled.div`
     width: 60%;
     font-weight: bold;
     color: grey;
+    margin-top: 50px;
+
 
 `;
 const Settings = styled.div`
