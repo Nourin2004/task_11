@@ -201,15 +201,60 @@ const ProEditIcon2 = styled.img`
     display: block;
     width: 100%;
 `;
-const ProfileDiv3 = styled.div``;
-const ProfileLeft3 = styled.div``;
-const ProfileImage3 = styled.div``;
-const ProImage3 = styled.img``;
+const ProfileDiv3 = styled.div`
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    margin: 20px 0px;
+    :hover {
+        box-shadow: 3px 5px 20px 10px #d1d1d1;
+    }
+`;
+const ProfileLeft3 = styled.div`
+    display: flex;
+    justify-content: space-between;
+`;
+const ProfileImage3 = styled.div`
+    width: 40px;
+    margin-right: 20px;
+`;
+const ProImage3 = styled.img`
+    display: block;
+    width: 100%;
+    border-radius: 50px;
+`;
 const ProfileThreeName = styled.div``;
-const ProThreeInput = styled.input``;
-const ProfileThreeP = styled.div``;
-const ProfileRight3 = styled.div``;
-const ProfileIcon3 = styled.div``;
-const ProDltIcon3 = styled.img``;
-const ProEditIcon3 = styled.img``;
-const ProIcon3 = styled.img``;
+const ProThreeInput = styled.input`
+    font-weight: bold;
+    font-size: 13px;
+    border: 0;
+    outline: 0;
+`;
+const ProfileThreeP = styled.p`
+    color: grey;
+    font-size: 10px;
+`;
+const ProfileRight3 = styled.div`
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+`;
+const ProfileIcon3 = styled.div`
+    width: 18px;
+`;
+const ProDltIcon3 = styled.img`
+    display: block;
+    width: 100%;
+`;
+const ProEditIcon3 = styled.img`
+    display: block;
+    width: 100%;
+`;
+const ProIcon3 = styled.img`
+    display: block;
+    width: 100%;
+`;

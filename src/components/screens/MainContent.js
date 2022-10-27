@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Profiledata from "./Profiledata";
+import Grapht from "./Grapht";
 
 function MainContent() {
     return (
@@ -71,6 +72,7 @@ function MainContent() {
                 </Seemore>
                 <Bottom>
                   <Profiledata />
+                  <Grapht/>
                 </Bottom>
                  
                
