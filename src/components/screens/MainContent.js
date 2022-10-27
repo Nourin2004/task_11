@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-// import Profiles from "./Profiles";
+import Profiledata from "./Profiledata";
 
 function MainContent() {
     return (
         <>
             <SpotContainer>
+           
                 <TopContainer>
                     <DivOne>
                         <MGuest>
@@ -68,27 +69,24 @@ function MainContent() {
                         <See6>See more</See6>
                     </SeeLeft>
                 </Seemore>
-
+                <Bottom>
+                  <Profiledata />
+                </Bottom>
                  
-                {/* <Profiles /> */}
+               
             </SpotContainer>
+            
         </>
     );
 }
 
 export default MainContent;
 
-// import styled from "styled-components";
-// import Header from "./../screens/Header";
-// import Profiles from "./Profiles";
 
-// function MainContent() {
-//     return (
-
-//     );
-// }
-// export default MainContent;
-
+const Bottom = styled.div`
+ display: flex;
+ justify-content: space-between;
+`;
 const SpotContainer = styled.section`
     background: #f5f1f1;
     width: 90%;
