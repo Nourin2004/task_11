@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from "styled-components"
-import { NavLink } from 'react-router-dom'
 
+// import image1 from "../../Assets/Logo.svg"
 import image2 from "../../Assets/akar.svg"
 
 function Sidebar() {
@@ -13,19 +13,19 @@ function Sidebar() {
         <Links>
                     <Link1>
                         <Akar src={image2}/>
-                        <H3 to="/">Dasboard</H3>
+                        <H3>Dasboard</H3>
                     </Link1>
                     <Link>
                         <Catering src={require("../../Assets/cake.svg").default}/>
-                        <H3 to="/catering">Catering status</H3>
+                        <H3>Catering status</H3>
                     </Link>
                     <Link>
                         <Traffic src={require("../../Assets/bx.svg").default}/>
-                        <H3 to="/guestTraffic">Guest traffic</H3>
+                        <H3>Guest traffic</H3>
                     </Link>
                     <Link>
                         <Reward src={require("../../Assets/ant.svg").default}/>
-                        <H3 to="/gifts">Gifts</H3>
+                        <H3>Gifts</H3>
                     </Link>
                  
                 </Links>
@@ -36,18 +36,20 @@ function Sidebar() {
     
         <H4>SETTINGS</H4>
         <Links>
-                    <Link to="/account">
+                    <Link>
                         <Akar src={require("../../Assets/account.svg").default}/>
-                        <H3 >Account</H3>
+                        <H3>Account</H3>
                     </Link>
-                    <Link  to="/wallet">
+                    <Link>
                         <Catering src={require("../../Assets/wallet.svg").default}/>
                         <H3>Wallet</H3>
                     </Link>
-                    <Link to="/help">
+                    <Link>
                         <Traffic src={require("../../Assets/help.svg").default}/>
                         <H3>Help & Support</H3>
                     </Link>
+                    
+                 
                 </Links>
       </Settings>
    </Container>
@@ -91,7 +93,7 @@ const Link1 = styled.li`
     font-size: 17px;
     font-weight: normal;
 `;
-const Link = styled(NavLink)`
+const Link = styled.li`
     display: flex;
     font-size: 17px;
     font-weight: normal;
@@ -121,7 +123,7 @@ const Reward = styled.img`
     width: 15%;
     margin-right: 10px;
 `;
-const H3 = styled.h3``;
+const H3 = styled.div``;
 
 const H4 = styled.div`
     width: 60%;

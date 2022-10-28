@@ -85,6 +85,14 @@ export default Profiledata;
 
 const ProfileContainer = styled.section`
     width: 39%;
+    @media all and (max-width: 1080px) {
+        flex-wrap: wrap;
+        width: 80%;
+    }
+    @media all and (max-width: 980px) {
+        flex-wrap: wrap;
+        width: 100%;
+    }
 `;
 const Profiles = styled.div``;
 const ProfileDiv1 = styled.div`

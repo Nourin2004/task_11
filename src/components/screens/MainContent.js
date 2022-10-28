@@ -228,7 +228,7 @@ const SeeRight = styled.div`
     align-items: center;
     width: 38%;`;
 const SH5 = styled.h5`
- font-size: 27px;
+    font-size: 27px;
     color: #000;
     font-weight: 500;
     margin: 0 10px;
