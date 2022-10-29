@@ -36,15 +36,15 @@ function Sidebar() {
             <Settings>
                 <H4>SETTINGS</H4>
                 <Links>
-                    <AccountBox  to="/rewards">
+                    <AccountBox to="/rewards">
                         <Akar src={Accountimg} />
                         <H3>Account</H3>
                     </AccountBox>
-                    <WalletBox  to="/wallet">
+                    <WalletBox to="/wallet">
                         <Catering src={walletimg} />
                         <H3>Wallet</H3>
                     </WalletBox>
-                    <HelpBox  to="/help">
+                    <HelpBox to="/help">
                         <Traffic src={Trafficimgs} />
                         <H3>Help & Support</H3>
                     </HelpBox>

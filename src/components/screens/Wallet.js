@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 
-
 function Wallet() {
     return (
         <>
@@ -25,5 +24,3 @@ const Content = styled.h5`
     font-size: 20px;
     font-weight: bold;
 `;
-
-

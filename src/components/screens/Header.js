@@ -3,9 +3,13 @@ import styled from "styled-components";
 import image1 from "../../Assets/Logo.svg";
 import image2bell from "../../Assets/bxs_bell.svg";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 function Header() {
     return (
         <>
+            <Helmet>
+                <title>Vorgez</title>
+            </Helmet>
             <Container>
                 <HeaderContainer>
                     <HeaderImage>

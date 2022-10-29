@@ -58,7 +58,7 @@ function CRMDashBoard() {
                                 }}
                             >
                                 <Profile>
-                                    <img src={guest.guest_image} alt="Image" />
+                                    <Img src={guest.guest_image} alt="Image" />
                                 </Profile>
                                 <Detail>
                                     <h4>{guest.guest_name}</h4>
@@ -113,10 +113,12 @@ const MainBox = styled.div`
     width: 500px;
     height: 100px;
     background-color: #fa8787;
-    box-shadow: 1px 0px 13px 1px #c5c5c5;
     border-radius: 10px;
     margin: 15px 0;
     position: relative;
+    &:hover {
+        box-shadow: 1px 0px 13px 1px #c5c5c5;
+    }
 `;
 const ProfileDiv = styled.div`
     flex: 1;
@@ -127,11 +129,11 @@ const Profile = styled.div`
     width: 50px;
     border-radius: 50%;
     margin-right: 20px;
-    img {
-        width: 100%;
-        display: block;
-        border-radius: 50%;
-    }
+`;
+const Img = styled.img`
+    width: 100%;
+    display: block;
+    border-radius: 50%;
 `;
 const Detail = styled.div`
     flex: 1;
@@ -193,7 +195,6 @@ const IconDiv = styled.div`
     cursor: pointer;
 `;
 const Pen = styled(BsPencilFill)``;
-const DeleteDiv = styled.div``;
 const Delete = styled(FaTrash)``;
 const InputContainer = styled.div`
     display: flex;

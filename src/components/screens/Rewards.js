@@ -3,9 +3,11 @@ import styled from "styled-components";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 
+
 function Rewards() {
     return (
         <>
+            
             <Header />
             <Container>
                 <Sidebar />
