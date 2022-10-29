@@ -149,6 +149,9 @@ const DivOne = styled.div`
     @media all and (max-width: 640px) {
         width: 84%;
     }
+    @media all and (max-width: 480px) {
+        width: 100%;
+    }
 `;
 const MGuest = styled.div`
     display: flex;
@@ -190,6 +193,12 @@ const MH1 = styled.h1`
     font-weight: bold;
     margin-top: 20px;
     color: #000;
+    @media all and (max-width: 480px) {
+        font-size: 35px;
+    }
+    @media all and (max-width: 360px) {
+        font-size: 29px;
+    }
 `;
 const MRight = styled.div``;
 const DivTwo = styled.div`
@@ -206,6 +215,9 @@ const DivTwo = styled.div`
     @media all and (max-width: 640px) {
         width: 84%;
         margin-bottom: 20px;
+    }
+    @media all and (max-width: 480px) {
+        width: 100%;
     }
 `;
 const FGuest = styled.div`
@@ -235,6 +247,9 @@ const VisitorTraffic = styled.h3`
     font-weight: bold;
     margin-left: 10px;
     color: #000;
+    @media all and (max-width: 640px) {
+        display: none;
+    }
 `;
 const FInvites = styled.div`
     display: flex;
@@ -250,6 +265,12 @@ const FH1 = styled.div`
     font-size: 40px;
     font-weight: bold;
     color: #000;
+    @media all and (max-width: 480px) {
+        font-size: 35px;
+    }
+    @media all and (max-width: 360px) {
+        font-size: 29px;
+    }
 `;
 const HR = styled.hr`
     border-right: 2px solid #000;
@@ -269,6 +290,9 @@ const DivThree = styled.div`
     @media all and (max-width: 640px) {
         width: 35%;
     }
+    @media all and (max-width: 640px) {
+        display: none;
+    }
 `;
 const TrafficH4 = styled.h4`
     font-size: 15px;
@@ -276,7 +300,11 @@ const TrafficH4 = styled.h4`
     margin-top: 10px;
     text-align: center;
 `;
-const TrafficDiv = styled.div``;
+const TrafficDiv = styled.div`
+    @media all and (max-width: 640px) {
+        display: none;
+    }
+`;
 const TrafficImage = styled.img`
     display: block;
     width: 100%;
@@ -301,6 +329,9 @@ const SeeRight = styled.div`
     @media all and (max-width: 640px) {
         width: 59%;
     }
+    @media all and (max-width: 360px) {
+        display: none;
+    }
 `;
 const SH5 = styled.h5`
     font-size: 18px;
@@ -314,6 +345,9 @@ const SeeLeft = styled.div`
     width: 42%;
     @media all and (max-width: 640px) {
         width: 59%;
+    }
+    @media all and (max-width: 360px) {
+        display: none;
     }
 `;
 const See6 = styled.h6`

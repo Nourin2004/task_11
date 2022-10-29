@@ -122,6 +122,9 @@ const GraphContainer = styled.section`
     @media all and (max-width: 980px) {
         width: 198%;
     }
+    @media all and (max-width: 360px) {
+        display: none;
+    }
 `;
 
 const BarChartBox = styled.section`

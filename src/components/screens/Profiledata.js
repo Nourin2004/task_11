@@ -125,6 +125,13 @@ const MainBox = styled.div`
     @media all and (max-width: 640px) {
         width: 421px;
     }
+    @media all and (max-width: 480px) {
+        width: 328px;
+    }
+    @media all and (max-width: 360px) {
+        width: 306px;
+        margin-left: -18px;
+    }
 `;
 const ProfileDiv = styled.div`
     flex: 1;
@@ -140,6 +147,9 @@ const Img = styled.img`
     width: 100%;
     display: block;
     border-radius: 50%;
+    @media all and (max-width: 360px) {
+        width: 75%;
+    }
 `;
 const Detail = styled.div`
     flex: 1;
@@ -147,6 +157,9 @@ const Detail = styled.div`
         font-size: 18px;
         color: #3f3f3f;
         text-transform: capitalize;
+        @media all and (max-width: 360px) {
+            font-size: 15px;
+        }
     }
     span {
         color: #747474;
