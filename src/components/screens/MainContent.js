@@ -244,7 +244,7 @@ const FIconImage = styled.img`
 const FemaleGuest = styled.h3`
     font-size: 18px;
     font-weight: bold;
-    margin-left: 10px;
+    margin-left: 11px;
     color: #000;
 `;
 const VisitorTraffic = styled.h3`
