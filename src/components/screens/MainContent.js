@@ -193,6 +193,9 @@ const MH1 = styled.h1`
     font-weight: bold;
     margin-top: 20px;
     color: #000;
+    @media all and (max-width: 980px) {
+        font-size: 35px;
+    }
     @media all and (max-width: 480px) {
         font-size: 35px;
     }
@@ -209,13 +212,15 @@ const DivTwo = styled.div`
     @media all and (max-width: 1440px) {
         width: 45%;
     }
-    @media all and (max-width: 1440px) {
-        width: 65%;
+    @media all and (max-width: 980px) {
+        width: 64%;
     }
+
     @media all and (max-width: 640px) {
         width: 84%;
         margin-bottom: 20px;
     }
+
     @media all and (max-width: 480px) {
         width: 100%;
     }
@@ -265,6 +270,9 @@ const FH1 = styled.div`
     font-size: 40px;
     font-weight: bold;
     color: #000;
+    @media all and (max-width: 980px) {
+        font-size: 35px;
+    }
     @media all and (max-width: 480px) {
         font-size: 35px;
     }
@@ -281,11 +289,10 @@ const DivThree = styled.div`
     width: 14%;
     background-color: #fff;
     border-radius: 15px;
-    @media all and (max-width: 1440px) {
-        width: 20%;
-    }
+
     @media all and (max-width: 1440px) {
         width: 31%;
+        margin-top: 20px;
     }
     @media all and (max-width: 640px) {
         width: 35%;

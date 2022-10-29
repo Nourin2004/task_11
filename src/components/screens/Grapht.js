@@ -114,10 +114,10 @@ const GraphContainer = styled.section`
     border-radius: 20px;
     text-align: center;
     @media all and (max-width: 1440px) {
-        width: 125%;
+        width: 138%;
     }
     @media all and (max-width: 1050px) {
-        width: 132%;
+        width: 145%;
     }
     @media all and (max-width: 980px) {
         width: 198%;
@@ -128,7 +128,7 @@ const GraphContainer = styled.section`
 `;
 
 const BarChartBox = styled.section`
-    width: 100%;
+    width: 84%;
     margin: 0 auto;
     @media all and (max-width: 980px) {
         width: 92%;
