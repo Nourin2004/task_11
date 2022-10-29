@@ -119,6 +119,12 @@ const MainBox = styled.div`
     &:hover {
         box-shadow: 1px 0px 13px 1px #c5c5c5;
     }
+    @media all and (max-width: 1440px) {
+        width: 470px;
+    }
+    @media all and (max-width: 640px) {
+        width: 421px;
+    }
 `;
 const ProfileDiv = styled.div`
     flex: 1;

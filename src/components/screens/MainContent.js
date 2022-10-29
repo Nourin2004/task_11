@@ -7,10 +7,14 @@ import Header from "./Header";
 import Mimage from "../../Assets/white icon.svg";
 import Fimage from "../../Assets/white icon2.svg";
 import Timage from "../../Assets/Group 3465418.svg";
+import { Helmet } from "react-helmet";
 
 function MainContent() {
     return (
         <>
+            <Helmet>
+                <title>Vorgez</title>
+            </Helmet>
             <Header />
             <Container>
                 <Sidebar />
@@ -95,9 +99,15 @@ export default MainContent;
 const Bottom = styled.div`
     display: flex;
     justify-content: space-between;
+    @media all and (max-width: 1280px) {
+        flex-wrap: wrap;
+    }
 `;
 const ProfileContainer = styled.div`
     width: 45%;
+    @media all and (max-width: 1280px) {
+        width: 55%;
+    }
 `;
 const GraphContainer = styled.div`
     width: 50%;
@@ -109,16 +119,36 @@ const SpotContainer = styled.section`
     background: #f5f1f1;
     width: 80%;
     padding: 25px;
+
+    @media all and (max-width: 768px) {
+        width: 100%;
+    }
 `;
 const TopContainer = styled.section`
     display: flex;
     justify-content: space-between;
+    @media all and (max-width: 1440px) {
+        flex-wrap: wrap;
+    }
+    @media all and (max-width: 980px) {
+        flex-wrap: wrap;
+    }
 `;
 const DivOne = styled.div`
     background-color: #a5e3e3;
     width: 34%;
     padding: 30px;
     border-radius: 18px;
+    @media all and (max-width: 1440px) {
+        width: 45%;
+    }
+    @media all and (max-width: 980px) {
+        width: 65%;
+        margin-bottom: 30px;
+    }
+    @media all and (max-width: 640px) {
+        width: 84%;
+    }
 `;
 const MGuest = styled.div`
     display: flex;
@@ -145,6 +175,9 @@ const MaleGuest = styled.h3`
 const MInvites = styled.section`
     display: flex;
     justify-content: space-between;
+    /* @media all and (max-width: 768px) {
+        justify-content: space-around;
+    } */
 `;
 const MLeft = styled.div``;
 const MH4 = styled.h4`
@@ -164,6 +197,16 @@ const DivTwo = styled.div`
     width: 34%;
     padding: 32px;
     border-radius: 18px;
+    @media all and (max-width: 1440px) {
+        width: 45%;
+    }
+    @media all and (max-width: 1440px) {
+        width: 65%;
+    }
+    @media all and (max-width: 640px) {
+        width: 84%;
+        margin-bottom: 20px;
+    }
 `;
 const FGuest = styled.div`
     display: flex;
@@ -217,6 +260,15 @@ const DivThree = styled.div`
     width: 14%;
     background-color: #fff;
     border-radius: 15px;
+    @media all and (max-width: 1440px) {
+        width: 20%;
+    }
+    @media all and (max-width: 1440px) {
+        width: 31%;
+    }
+    @media all and (max-width: 640px) {
+        width: 35%;
+    }
 `;
 const TrafficH4 = styled.h4`
     font-size: 15px;
@@ -228,18 +280,27 @@ const TrafficDiv = styled.div``;
 const TrafficImage = styled.img`
     display: block;
     width: 100%;
+    @media all and (max-width: 1440px) {
+        width: 80%;
+    }
 `;
 const Seemore = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
+    @media all and (max-width: 640px) {
+        flex-wrap: wrap;
+    }
 `;
 const SeeRight = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 38%;
+    width: 42%;
+    @media all and (max-width: 640px) {
+        width: 59%;
+    }
 `;
 const SH5 = styled.h5`
     font-size: 18px;
@@ -250,7 +311,10 @@ const SeeLeft = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 55%;
+    width: 42%;
+    @media all and (max-width: 640px) {
+        width: 59%;
+    }
 `;
 const See6 = styled.h6`
     font-size: 12px;

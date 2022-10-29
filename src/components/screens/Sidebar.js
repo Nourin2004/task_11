@@ -63,6 +63,12 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media all and (max-width: 980px) {
+        width: 30%;
+    }
+    @media all and (max-width: 768px) {
+        display: none;
+    }
 `;
 
 const ProfileContainer = styled.div`
@@ -158,6 +164,9 @@ const Reward = styled.img`
 `;
 const H3 = styled.h3`
     font-size: 18px;
+    @media all and (max-width: 1050px) {
+        font-size: 16px;
+    }
 `;
 
 const H4 = styled.div`

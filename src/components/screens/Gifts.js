@@ -2,10 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
+import { Helmet } from "react-helmet";
 
 function Gifts() {
     return (
         <>
+            <Helmet>
+                <title>Gifts | Vorgez</title>
+            </Helmet>
             <Header />
             <Container>
                 <Sidebar />

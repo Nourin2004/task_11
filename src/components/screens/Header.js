@@ -3,13 +3,9 @@ import styled from "styled-components";
 import image1 from "../../Assets/Logo.svg";
 import image2bell from "../../Assets/bxs_bell.svg";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
 function Header() {
     return (
         <>
-            <Helmet>
-                <title>Vorgez</title>
-            </Helmet>
             <Container>
                 <HeaderContainer>
                     <HeaderImage>
@@ -66,6 +62,9 @@ const OverView = styled(Link)`
         color: #000;
         border-bottom: 2px solid #000;
     }
+    @media all and (max-width: 640px) {
+        font-size: 15px;
+    }
 `;
 const Guest = styled(Link)`
     font-size: 17px;
@@ -76,6 +75,9 @@ const Guest = styled(Link)`
         color: #000;
         border-bottom: 2px solid #000;
     }
+    @media all and (max-width: 640px) {
+        font-size: 15px;
+    }
 `;
 const Traffic = styled(Link)`
     font-size: 17px;
@@ -85,6 +87,9 @@ const Traffic = styled(Link)`
     &:hover {
         color: #000;
         border-bottom: 2px solid #000;
+    }
+    @media all and (max-width: 640px) {
+        font-size: 15px;
     }
 `;
 const LeftContainer = styled.ul`

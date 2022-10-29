@@ -108,15 +108,31 @@ export default function Grapht() {
 }
 
 const GraphContainer = styled.section`
-    width: 95%;
+    width: 98%;
     margin-top: 35px;
     background-color: #fff;
     border-radius: 20px;
     text-align: center;
+    @media all and (max-width: 1440px) {
+        width: 125%;
+    }
+    @media all and (max-width: 1050px) {
+        width: 132%;
+    }
+    @media all and (max-width: 980px) {
+        width: 198%;
+    }
 `;
+
 const BarChartBox = styled.section`
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
+    @media all and (max-width: 980px) {
+        width: 92%;
+    }
+    @media all and (max-width: 640px) {
+        overflow: auto;
+    }
 `;
 
 const GraphHead = styled.section`
