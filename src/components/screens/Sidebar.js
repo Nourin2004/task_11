@@ -1,135 +1,170 @@
-import React from 'react'
-import styled from "styled-components"
-import { NavLink } from 'react-router-dom'
-
-import image2 from "../../Assets/akar.svg"
+import React from "react";
+import styled from "styled-components";
+import image2 from "../../Assets/akar.svg";
+import cateringimg from "../../Assets/cake.svg";
+import Trafficimg from "../../Assets/bx.svg";
+import Rewardimg from "../../Assets/ant.svg";
+import Accountimg from "../../Assets/account.svg";
+import walletimg from "../../Assets/wallet.svg";
+import Trafficimgs from "../../Assets/help.svg";
+import { Link } from "react-router-dom";
 
 function Sidebar() {
-  return (
-   <Container>
-      <ProfileContainer>
-        {/* <Logo src={image1}/> */}
-        <H4>MAIN MENU</H4>
-        <Links>
-                    <Link1>
-                        <Akar src={image2}/>
-                        <H3 to="/">Dasboard</H3>
-                    </Link1>
-                    <Link>
-                        <Catering src={require("../../Assets/cake.svg").default}/>
-                        <H3 to="/catering">Catering status</H3>
-                    </Link>
-                    <Link>
-                        <Traffic src={require("../../Assets/bx.svg").default}/>
-                        <H3 to="/guestTraffic">Guest traffic</H3>
-                    </Link>
-                    <Link>
-                        <Reward src={require("../../Assets/ant.svg").default}/>
-                        <H3 to="/gifts">Gifts</H3>
-                    </Link>
-                 
+    return (
+        <Container>
+            <ProfileContainer>
+                <H4>MAIN MENU</H4>
+                <Links>
+                    <AkarBox to="/">
+                        <Akar src={image2} />
+                        <H3>Dasboard</H3>
+                    </AkarBox>
+                    <CateringBox to="/catering">
+                        <Catering src={cateringimg} />
+                        <H3>Catering status</H3>
+                    </CateringBox>
+                    <TrafficBox to="/traffic">
+                        <Traffic src={Trafficimg} />
+                        <H3>Guest traffic</H3>
+                    </TrafficBox>
+                    <RewardBox to="/gifts">
+                        <Reward src={Rewardimg} />
+                        <H3>Gifts</H3>
+                    </RewardBox>
                 </Links>
-       
-        
-      </ProfileContainer>
-      <Settings>
-    
-        <H4>SETTINGS</H4>
-        <Links>
-                    <Link to="/account">
-                        <Akar src={require("../../Assets/account.svg").default}/>
-                        <H3 >Account</H3>
-                    </Link>
-                    <Link  to="/wallet">
-                        <Catering src={require("../../Assets/wallet.svg").default}/>
+            </ProfileContainer>
+            <Settings>
+                <H4>SETTINGS</H4>
+                <Links>
+                    <AccountBox  to="/rewards">
+                        <Akar src={Accountimg} />
+                        <H3>Account</H3>
+                    </AccountBox>
+                    <WalletBox  to="/wallet">
+                        <Catering src={walletimg} />
                         <H3>Wallet</H3>
-                    </Link>
-                    <Link to="/help">
-                        <Traffic src={require("../../Assets/help.svg").default}/>
+                    </WalletBox>
+                    <HelpBox  to="/help">
+                        <Traffic src={Trafficimgs} />
                         <H3>Help & Support</H3>
-                    </Link>
+                    </HelpBox>
                 </Links>
-      </Settings>
-   </Container>
-  )
+            </Settings>
+        </Container>
+    );
 }
 
 export default Sidebar;
 
 const Container = styled.div`
-   width:20%;
-   height: 100% !important;
-   border-radius: 2rem;
-   display: flex;
-   flex-direction: column;
+    width: 20%;
+    height: 100%;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 `;
 
 const ProfileContainer = styled.div`
-     display: flex;
+    display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
 `;
-// const Logo = styled.img`
-      
-//    width: 70%;
-//    margin: 0 auto;
-//    border-radius: 50%;
-//    margin-top: 65px;
-//    margin-left: 35px;
-//    margin-bottom: 20%;
-// `;
-const Links = styled.ul`
+const Links = styled.div`
     list-style: none;
-    line-height: 4em;
-  
+    line-height: 3em;
 `;
 
-const Link1 = styled.li`
+const AkarBox = styled(Link)`
     display: flex;
     font-size: 17px;
     font-weight: normal;
-`;
-const Link = styled(NavLink)`
-    display: flex;
-    font-size: 17px;
-    font-weight: normal;
-    color: #8D8989;
-    &:hover{
-      color: #000;
-      font-weight: 500;
-      
+    color: #8d8989;
+    &:hover {
+        color: #000;
     }
-    
-    
+`;
+const CateringBox = styled(Link)`
+    display: flex;
+    font-size: 17px;
+    font-weight: normal;
+    color: #8d8989;
+    &:hover {
+        color: #000;
+    }
+`;
+const TrafficBox = styled(Link)`
+    display: flex;
+    font-size: 17px;
+    font-weight: normal;
+    color: #8d8989;
+    &:hover {
+        color: #000;
+    }
+`;
+const RewardBox = styled(Link)`
+    display: flex;
+    font-size: 17px;
+    font-weight: normal;
+    color: #8d8989;
+    &:hover {
+        color: #000;
+    }
+`;
+const HelpBox = styled(Link)`
+    display: flex;
+    font-size: 17px;
+    font-weight: normal;
+    color: #8d8989;
+    &:hover {
+        color: #000;
+    }
+`;
+const AccountBox = styled(Link)`
+    display: flex;
+    font-size: 17px;
+    font-weight: normal;
+    color: #8d8989;
+    &:hover {
+        color: #000;
+    }
+`;
+const WalletBox = styled(Link)`
+    display: flex;
+    font-size: 17px;
+    font-weight: normal;
+    color: #8d8989;
+    &:hover {
+        color: #000;
+    }
 `;
 const Akar = styled.img`
     width: 15%;
     margin-right: 10px;
-
 `;
 const Catering = styled.img`
     width: 15%;
     margin-right: 10px;
-
-`;const Traffic = styled.img`
-     width: 15%;
+    display: block;
+`;
+const Traffic = styled.img`
+    width: 15%;
     margin-right: 10px;
 `;
 const Reward = styled.img`
     width: 15%;
     margin-right: 10px;
 `;
-const H3 = styled.h3``;
+const H3 = styled.h3`
+    font-size: 18px;
+`;
 
 const H4 = styled.div`
-    width: 60%;
+    width: 70%;
     font-weight: bold;
     color: grey;
-    margin-top: 50px;
-
-
+    margin: 30px 0;
 `;
 const Settings = styled.div`
     display: flex;
@@ -137,5 +172,3 @@ const Settings = styled.div`
     flex-direction: column;
     align-items: center;
 `;
-
-

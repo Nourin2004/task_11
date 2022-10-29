@@ -2,96 +2,112 @@ import React from "react";
 import styled from "styled-components";
 import Profiledata from "./Profiledata";
 import Grapht from "./Grapht";
+import Sidebar from "./Sidebar";
+import Header from "./Header";
+import Mimage from "../../Assets/white icon.svg";
+import Fimage from "../../Assets/white icon2.svg";
+import Timage from "../../Assets/Group 3465418.svg";
 
 function MainContent() {
     return (
         <>
-            <SpotContainer>
-           
-                <TopContainer>
-                    <DivOne>
-                        <MGuest>
-                            <MGuestImage>
-                                <MIconImage src={require("../../Assets/white icon.svg").default}/>
-                            </MGuestImage>
-                            <MaleGuest>Male Guest</MaleGuest>
-                        </MGuest>
-                        <MInvites>
-                            <MLeft>
-                                <MH4>Total invites</MH4>
-                                <MH1>8,124</MH1>
-                            </MLeft>
-                      
-                        <HR />
-                     
-                            <MRight>
-                                <MH4>Total Come</MH4>
-                                <MH1>4,204</MH1>
-                            </MRight>
-                       </MInvites>
-                    </DivOne>
-                    <DivTwo>
-                        <FGuest>
-                            <FGuestImage>
-                                <FIconImage src={require("../../Assets/white icon2.svg").default}/>
-                            </FGuestImage>
-                            <FemaleGuest>Female Guest</FemaleGuest>
-                        </FGuest>
-                        <FInvites>
-                            <FLeft>
-                                <FH4>Total invites</FH4>
-                                <FH1>9,620</FH1>
-                            </FLeft>
-                        
-                        <HR />
-                            <FRight>
-                                <FH4>Total Come</FH4>
-                                <FH1>6,125</FH1>
-                            </FRight>
+            <Header />
+            <Container>
+                <Sidebar />
+                <SpotContainer>
+                    <TopContainer>
+                        <DivOne>
+                            <MGuest>
+                                <MGuestImage>
+                                    <MIconImage src={Mimage} />
+                                </MGuestImage>
+                                <MaleGuest>Male Guest</MaleGuest>
+                            </MGuest>
+                            <MInvites>
+                                <MLeft>
+                                    <MH4>Total invites</MH4>
+                                    <MH1>8,124</MH1>
+                                </MLeft>
+
+                                <HR />
+
+                                <MRight>
+                                    <MH4>Total Come</MH4>
+                                    <MH1>4,204</MH1>
+                                </MRight>
+                            </MInvites>
+                        </DivOne>
+                        <DivTwo>
+                            <FGuest>
+                                <FGuestImage>
+                                    <FIconImage src={Fimage} />
+                                </FGuestImage>
+                                <FemaleGuest>Female Guest</FemaleGuest>
+                            </FGuest>
+                            <FInvites>
+                                <FLeft>
+                                    <FH4>Total invites</FH4>
+                                    <FH1>9,620</FH1>
+                                </FLeft>
+
+                                <HR />
+                                <FRight>
+                                    <FH4>Total Come</FH4>
+                                    <FH1>6,125</FH1>
+                                </FRight>
                             </FInvites>
-                    </DivTwo>
-                    <DivThree>
-                        <TrafficH4>
-                        <VisitorTraffic>Visitor Traffic</VisitorTraffic>
-                            <TrafficDiv>
-                                <TrafficImage src={require("../../Assets/Group 3465418.svg").default}/>
-                            </TrafficDiv>
-                            
-                        </TrafficH4>
-                    </DivThree>
-                </TopContainer>
-                <Seemore>
-                    <SeeRight>
-                        <SH5>Recently Guest</SH5>
-                        <See6>See more</See6>
-                    </SeeRight>
-                    <SeeLeft>
-                        <SH5>Guest Traffic</SH5>
-                        <See6>See more</See6>
-                    </SeeLeft>
-                </Seemore>
-                <Bottom>
-                  <Profiledata />
-                  <Grapht/>
-                </Bottom>
-                 
-               
-            </SpotContainer>
-            
+                        </DivTwo>
+                        <DivThree>
+                            <TrafficH4>
+                                <VisitorTraffic>Visitor Traffic</VisitorTraffic>
+                                <TrafficDiv>
+                                    <TrafficImage src={Timage} />
+                                </TrafficDiv>
+                            </TrafficH4>
+                        </DivThree>
+                    </TopContainer>
+                    <Seemore>
+                        <SeeRight>
+                            <SH5>Recently Guest</SH5>
+                            <See6>See more</See6>
+                        </SeeRight>
+                        <SeeLeft>
+                            <SH5>Guest Traffic</SH5>
+                            <See6>See more</See6>
+                        </SeeLeft>
+                    </Seemore>
+                    <Bottom>
+                        <ProfileContainer>
+                            <Profiledata />
+                        </ProfileContainer>
+                        <GraphContainer>
+                            <Grapht />
+                        </GraphContainer>
+                    </Bottom>
+                </SpotContainer>
+            </Container>
         </>
     );
 }
 
 export default MainContent;
 
-
 const Bottom = styled.div`
- display: flex;
- justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+`;
+const ProfileContainer = styled.div`
+    width: 45%;
+`;
+const GraphContainer = styled.div`
+    width: 50%;
+`;
+const Container = styled.div`
+    display: flex;
 `;
 const SpotContainer = styled.section`
     background: #f5f1f1;
-    width: 90%;
+    width: 80%;
     padding: 25px;
 `;
 const TopContainer = styled.section`
@@ -99,8 +115,8 @@ const TopContainer = styled.section`
     justify-content: space-between;
 `;
 const DivOne = styled.div`
-    background-color: #A5E3E3;
-    width:34%;
+    background-color: #a5e3e3;
+    width: 34%;
     padding: 30px;
     border-radius: 18px;
 `;
@@ -118,7 +134,7 @@ const MGuestImage = styled.span`
 `;
 const MIconImage = styled.img`
     display: block;
-    width: 100%; 
+    width: 100%;
 `;
 const MaleGuest = styled.h3`
     font-size: 18px;
@@ -144,7 +160,7 @@ const MH1 = styled.h1`
 `;
 const MRight = styled.div``;
 const DivTwo = styled.div`
-    background-color: #D2A2F7;
+    background-color: #d2a2f7;
     width: 34%;
     padding: 32px;
     border-radius: 18px;
@@ -160,10 +176,11 @@ const FGuestImage = styled.span`
     width: 40px;
     background: #000;
     display: inline-block;
-    `;
+`;
 const FIconImage = styled.img`
     display: block;
-    width: 100%;`;
+    width: 100%;
+`;
 const FemaleGuest = styled.h3`
     font-size: 18px;
     font-weight: bold;
@@ -194,44 +211,40 @@ const FH1 = styled.div`
 const HR = styled.hr`
     border-right: 2px solid #000;
     height: 75px;
-    
 `;
 const FRight = styled.div``;
 const DivThree = styled.div`
     width: 14%;
     background-color: #fff;
     border-radius: 15px;
-
 `;
 const TrafficH4 = styled.h4`
-     font-size: 15px;
+    font-size: 15px;
     font-weight: bold;
     margin-top: 10px;
     text-align: center;
 `;
-const TrafficDiv = styled.div`
-   
-`;
+const TrafficDiv = styled.div``;
 const TrafficImage = styled.img`
     display: block;
     width: 100%;
 `;
 const Seemore = styled.section`
-     display: flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    /* margin-top: 20px; */
+    margin-top: 20px;
 `;
 const SeeRight = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 38%;`;
+    width: 38%;
+`;
 const SH5 = styled.h5`
-    font-size: 27px;
+    font-size: 18px;
     color: #000;
     font-weight: 500;
-    margin: 0 10px;
 `;
 const SeeLeft = styled.div`
     display: flex;
@@ -240,7 +253,7 @@ const SeeLeft = styled.div`
     width: 55%;
 `;
 const See6 = styled.h6`
-    font-size: 20px;
+    font-size: 12px;
     color: grey;
-    font-weight: 500;
+    font-weight: 700;
 `;

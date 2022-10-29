@@ -1,7 +1,24 @@
-import React from "react";
-
+import React from 'react'
+import styled from "styled-components";
+import Header from "./Header";
+import Sidebar from "./Sidebar";
 function Help() {
-    return <div>help</div>;
+  return (
+    <>
+            <Header />
+            <Container>
+                <Sidebar />
+                <Content>Page Not Found</Content>
+            </Container>
+        </>
+  )
 }
 
-export default Help;
+export default Help
+const Container = styled.div`
+    display: flex;
+`;
+const Content = styled.h5`
+    font-size: 20px;
+    font-weight: bold;
+`;

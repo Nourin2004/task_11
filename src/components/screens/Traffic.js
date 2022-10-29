@@ -1,26 +1,23 @@
 import React from "react";
 import styled from "styled-components";
+import Grapht from "./Grapht";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 
-function Gifts() {
+function Traffic() {
     return (
         <>
             <Header />
             <Container>
                 <Sidebar />
-                <Content>Page Not Found</Content>
+                <Grapht />
             </Container>
         </>
     );
 }
 
-export default Gifts;
-
+export default Traffic;
 const Container = styled.div`
     display: flex;
 `;
-const Content = styled.h5`
-    font-size: 20px;
-    font-weight: bold;
-`;
+

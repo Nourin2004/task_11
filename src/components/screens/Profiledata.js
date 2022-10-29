@@ -1,268 +1,223 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import Avatar from "../../Assets/Rect 20695.jpg";
-import ImagePen from "../../Assets/solid_pen.svg";
-import ImageTrash from "../../Assets/bxs_trash.svg";
-import ImageDots from "../../Assets/bi.svg";
-import Avatar2 from "../../Assets/Recta 20696.jpg";
-function Profiledata() {
+import { BiDotsVerticalRounded } from "react-icons/bi";
+import { BsPencilFill } from "react-icons/bs";
+import { FaTrash } from "react-icons/fa";
+
+function CRMDashBoard() {
+    const [showMenus, setShowMenus] = useState(false);
+    const [selected, setSelected] = useState("");
+    const [showInput, setShowInput] = useState(false);
+    const [updatedName, setUpdatedName] = useState("");
+    const [guests, setGuests] = useState([
+        {
+            id: 1,
+            guest_name: "Aisyah Namanya",
+            time: "2 minutes",
+            guest_image: require("../../Assets/avatar.jpg"),
+        },
+        {
+            id: 2,
+            guest_name: "Cak Handoko",
+            time: "4 minutes",
+            guest_image: require("../../Assets/avatar1.jpg"),
+        },
+        {
+            id: 3,
+            guest_name: "Aisyah Namanya",
+            time: "10 minutes",
+            guest_image: require("../../Assets/avatar.jpg"),
+        },
+    ]);
+
+    const editGuestname = (guest) => {
+        guest.guest_name = updatedName;
+
+        setShowInput(false);
+        setUpdatedName("");
+        setShowMenus(false);
+    };
+
+    const deleteGuest = (id) => {
+        let new_list = guests.filter((item) => item.id !== id);
+        setGuests(new_list);
+        setShowMenus(false);
+        setSelected("");
+    };
     return (
-        <>
-            <ProfileContainer>
-                <Profiles>
-                    <ProfileDiv1>
-                        <ProfileLeft>
-                            <ProfileImage>
-                                <ProImage src={Avatar} />
-                            </ProfileImage>
-                            <ProfileName>
-                                <ProfileInput type={"text"} value={"Aisyah Namanya"} />
-                                <ProP>2 minute ago</ProP>
-                            </ProfileName>
-                        </ProfileLeft>
-                        <ProfileRight>
-                            <ProfileIcon>
-                                <ProEditIcon src={ImagePen} />
-                            </ProfileIcon>
-                            <ProfileIcon>
-                                <ProDltIcon src={ImageTrash} />
-                            </ProfileIcon>
-                            <ProfileIcon>
-                                <ProIcon src={ImageDots} />
-                            </ProfileIcon>
-                        </ProfileRight>
-                    </ProfileDiv1>
-                    <ProfileDiv2>
-                        <ProfileLeft2>
-                            <ProfileImage2>
-                                <ProImage2 src={Avatar2} />
-                            </ProfileImage2>
-                            <ProfileTwoName>
-                                <ProTwoInput type={"text"} value={"ACak Handoko"} />
-                                <ProfileTwoP>6 minute ago</ProfileTwoP>
-                            </ProfileTwoName>
-                        </ProfileLeft2>
-                        <ProfileRight2>
-                            <ProfileIcon2>
-                                <ProEditIcon2 src={ImagePen} />
-                            </ProfileIcon2>
-                            <ProfileIcon2>
-                                <ProDltIcon2 src={ImageTrash} />
-                            </ProfileIcon2>
-                            <ProfileIcon2>
-                                <ProIcon2 src={ImageDots} />
-                            </ProfileIcon2>
-                        </ProfileRight2>
-                    </ProfileDiv2>
-                    <ProfileDiv3>
-                        <ProfileLeft3>
-                            <ProfileImage3>
-                                <ProImage3 src={Avatar} />
-                            </ProfileImage3>
-                            <ProfileThreeName>
-                                <ProThreeInput type={"text"} value={"Aisyah Namanya"} />
-                                <ProfileThreeP>2 minute ago</ProfileThreeP>
-                            </ProfileThreeName>
-                        </ProfileLeft3>
-                        <ProfileRight3>
-                            <ProfileIcon3>
-                                <ProEditIcon3 src={ImagePen} />
-                            </ProfileIcon3>
-                            <ProfileIcon3>
-                                <ProDltIcon3 src={ImageTrash} />
-                            </ProfileIcon3>
-                            <ProfileIcon3>
-                                <ProIcon3 src={ImageDots} />
-                            </ProfileIcon3>
-                        </ProfileRight3>
-                    </ProfileDiv3>
-                </Profiles>
-            </ProfileContainer>
-        </>
+        <MainContainer id="main-div">
+            <Container>
+                {guests.map((guest) => (
+                    <MainBox key={guest.id}>
+                        <GuestDetail className={selected === guest.id && showMenus && "shrink"}>
+                            <ProfileDiv
+                                onClick={() => {
+                                    setShowMenus(false);
+                                    setShowInput(false);
+                                    setUpdatedName("");
+                                }}
+                            >
+                                <Profile>
+                                    <img src={guest.guest_image} alt="Image" />
+                                </Profile>
+                                <Detail>
+                                    <h4>{guest.guest_name}</h4>
+                                    <span>{guest.time}</span>
+                                </Detail>
+                            </ProfileDiv>
+                            <Menu
+                                onClick={() => {
+                                    setShowMenus(!showMenus);
+                                    setSelected(guest.id);
+                                    setUpdatedName("");
+                                    setShowInput(false);
+                                }}
+                            >
+                                <BiDotsVerticalRounded />
+                            </Menu>
+                        </GuestDetail>
+                        <MenuBox>
+                            <IconDiv
+                                onClick={() => {
+                                    setShowInput(!showInput);
+                                    setUpdatedName("");
+                                }}
+                            >
+                                <Pen />
+                            </IconDiv>
+                            <IconDiv onClick={() => deleteGuest(guest.id)}>
+                                <Delete />
+                            </IconDiv>
+                        </MenuBox>
+                        <InputContainer className={showInput && selected === guest.id && "show"}>
+                            <input type="text" placeholder="your name" value={updatedName} onChange={(e) => setUpdatedName(e.target.value)} />
+                            <span onClick={() => editGuestname(guest)}>Set</span>
+                        </InputContainer>
+                    </MainBox>
+                ))}
+            </Container>
+        </MainContainer>
     );
 }
-export default Profiledata;
 
-const ProfileContainer = styled.section`
-    width: 39%;
-    @media all and (max-width: 1080px) {
-        flex-wrap: wrap;
-        width: 80%;
+export default CRMDashBoard;
+
+const MainContainer = styled.div`
+    padding: 30px 0;
+`;
+const Container = styled.div`
+    width: 100%;
+    height: 100%;
+`;
+const MainBox = styled.div`
+    width: 500px;
+    height: 100px;
+    background-color: #fa8787;
+    box-shadow: 1px 0px 13px 1px #c5c5c5;
+    border-radius: 10px;
+    margin: 15px 0;
+    position: relative;
+`;
+const ProfileDiv = styled.div`
+    flex: 1;
+    display: flex;
+    align-items: center;
+`;
+const Profile = styled.div`
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+    img {
+        width: 100%;
+        display: block;
+        border-radius: 50%;
     }
-    @media all and (max-width: 980px) {
-        flex-wrap: wrap;
+`;
+const Detail = styled.div`
+    flex: 1;
+    h4 {
+        font-size: 18px;
+        color: #3f3f3f;
+        text-transform: capitalize;
+    }
+    span {
+        color: #747474;
+        font-size: 14px;
+    }
+`;
+const Menu = styled.div`
+    font-size: 20px;
+    cursor: pointer;
+    padding-right: 20px;
+`;
+const GuestDetail = styled.div`
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 20px 0 20px 20px;
+    overflow-x: hidden;
+    transition: 0.4s all ease;
+    &.shrink {
+        width: 80%;
+        ${Menu} {
+            display: none;
+        }
+    }
+`;
+
+const MenuBox = styled.div`
+    width: 100px;
+    height: 100%;
+    background-color: #d2a2f7;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 10px;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+`;
+const IconDiv = styled.div`
+    font-size: 17px;
+    padding: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+`;
+const Pen = styled(BsPencilFill)``;
+const DeleteDiv = styled.div``;
+const Delete = styled(FaTrash)``;
+const InputContainer = styled.div`
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 30px;
+    position: absolute;
+    top: 65px;
+    z-index: 20;
+    right: 15px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 1px 3px 9px 0 #acacac8f;
+    padding: 0 10px;
+    visibility: hidden;
+    input {
         width: 100%;
     }
-`;
-const Profiles = styled.div``;
-const ProfileDiv1 = styled.div`
-    padding: 25px;
-    display: flex;
-    justify-content: space-between;
-    background-color: #fff;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 20px;
-    margin: 20px 0px;
-    :hover {
-        box-shadow: 3px 5px 20px 10px #d1d1d1;
+    span {
+        display: inline-block;
+        font-size: 13px;
+        cursor: pointer;
     }
-`;
-const ProfileLeft = styled.div`
-    display: flex;
-    justify-content: space-between;
-`;
-const ProfileImage = styled.div`
-    width: 40px;
-    margin-right: 20px;
-`;
-const ProImage = styled.img`
-    display: block;
-    width: 100%;
-    border-radius: 50px;
-`;
-const ProfileName = styled.div``;
-const ProfileInput = styled.input`
-    font-weight: bold;
-    font-size: 13px;
-    border: 0;
-    outline: 0;
-`;
-const ProP = styled.p`
-    color: grey;
-    font-size: 10px;
-`;
-const ProfileRight = styled.div`
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-`;
-const ProfileIcon = styled.section`
-    width: 18px;
-`;
-const ProEditIcon = styled.img`
-    display: block;
-    width: 100%;
-`;
-const ProDltIcon = styled.img`
-    display: block;
-    width: 100%;
-`;
-const ProIcon = styled.img`
-    display: block;
-    width: 100%;
-`;
-const ProfileDiv2 = styled.section`
-    padding: 25px;
-    display: flex;
-    justify-content: space-between;
-    background-color: #fff;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 20px;
-    margin: 20px 0px;
-    :hover {
-        box-shadow: 3px 5px 20px 10px #d1d1d1;
+    &.show {
+        visibility: visible;
     }
-`;
-const ProfileLeft2 = styled.div`
-    display: flex;
-    justify-content: space-between;
-`;
-const ProfileImage2 = styled.div`
-    width: 40px;
-    margin-right: 20px;
-`;
-const ProImage2 = styled.img`
-    display: block;
-    width: 100%;
-    border-radius: 50px;
-`;
-const ProfileTwoName = styled.div``;
-const ProTwoInput = styled.input`
-    font-weight: bold;
-    font-size: 13px;
-    border: 0;
-    outline: 0;
-`;
-const ProfileTwoP = styled.p`
-    color: grey;
-    font-size: 10px;
-`;
-const ProfileRight2 = styled.div`
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-`;
-const ProfileIcon2 = styled.div`
-    width: 18px;
-`;
-const ProDltIcon2 = styled.img`
-    display: block;
-    width: 100%;
-`;
-const ProIcon2 = styled.img`
-    display: block;
-    width: 100%;
-`;
-const ProEditIcon2 = styled.img`
-    display: block;
-    width: 100%;
-`;
-const ProfileDiv3 = styled.div`
-    padding: 25px;
-    display: flex;
-    justify-content: space-between;
-    background-color: #fff;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 20px;
-    margin: 20px 0px;
-    :hover {
-        box-shadow: 3px 5px 20px 10px #d1d1d1;
-    }
-`;
-const ProfileLeft3 = styled.div`
-    display: flex;
-    justify-content: space-between;
-`;
-const ProfileImage3 = styled.div`
-    width: 40px;
-    margin-right: 20px;
-`;
-const ProImage3 = styled.img`
-    display: block;
-    width: 100%;
-    border-radius: 50px;
-`;
-const ProfileThreeName = styled.div``;
-const ProThreeInput = styled.input`
-    font-weight: bold;
-    font-size: 13px;
-    border: 0;
-    outline: 0;
-`;
-const ProfileThreeP = styled.p`
-    color: grey;
-    font-size: 10px;
-`;
-const ProfileRight3 = styled.div`
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-`;
-const ProfileIcon3 = styled.div`
-    width: 18px;
-`;
-const ProDltIcon3 = styled.img`
-    display: block;
-    width: 100%;
-`;
-const ProEditIcon3 = styled.img`
-    display: block;
-    width: 100%;
-`;
-const ProIcon3 = styled.img`
-    display: block;
-    width: 100%;
 `;

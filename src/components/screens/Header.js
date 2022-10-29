@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import image1 from "../../Assets/Logo.svg";
+import image2bell from "../../Assets/bxs_bell.svg";
 import { Link } from "react-router-dom";
-import Navbar from "./Navbar";
 function Header() {
     return (
         <>
@@ -14,24 +14,23 @@ function Header() {
 
                     <LeftContainer>
                         <HeaderLi>
-                            <OverView> Overview</OverView>
+                            <OverView to="/"> Overview</OverView>
                         </HeaderLi>
                         <HeaderLi>
-                            <Guest to="/Profiledata">Guestlist</Guest>
+                            <Guest to="/guest">Guestlist</Guest>
                         </HeaderLi>
                         <HeaderLi>
-                            <Traffic to="/guestTaffic">Temporary traffic</Traffic>
+                            <Traffic to="/traffic">Temporary traffic</Traffic>
                         </HeaderLi>
                     </LeftContainer>
                 </HeaderContainer>
                 <HeaderImageContainer>
                     <RightContainer>
-                        <ImageContainer src={require("../../Assets/bxs_bell.svg").default} />
+                        <ImageContainer src={image2bell} />
 
-                        <ImageContainer2 src={require("../../Assets/Rect 20695.jpg")} />
+                        <ImageContainer2 src={require("../../Assets/avatar1.jpg")} />
                     </RightContainer>
                 </HeaderImageContainer>
-                <Navbar />
             </Container>
         </>
     );
@@ -44,12 +43,8 @@ const Container = styled.header`
     width: 95%;
     margin: 0 auto;
     align-items: center;
-    padding-top: 0px;
-    margin-top: 70px;
+    height: 130px;
 `;
-
-// const HeaderContainer = styled.div``;
-// const HeaderImage = styled.div``;
 const HeaderLi = styled.li`
     margin-right: 30px;
 `;
@@ -58,8 +53,9 @@ const HeaderImageContainer = styled.ul`
     display: flex;
     list-style: none;
 `;
-const OverView = styled.div`
+const OverView = styled(Link)`
     font-size: 17px;
+    display: block;
     font-weight: normal;
     color: #8d8989;
     &:hover {
@@ -69,6 +65,7 @@ const OverView = styled.div`
 `;
 const Guest = styled(Link)`
     font-size: 17px;
+    display: block;
     font-weight: normal;
     color: #8d8989;
     &:hover {
@@ -79,6 +76,7 @@ const Guest = styled(Link)`
 const Traffic = styled(Link)`
     font-size: 17px;
     font-weight: normal;
+    display: block;
     color: #8d8989;
     &:hover {
         color: #000;
@@ -90,13 +88,11 @@ const LeftContainer = styled.ul`
     display: flex;
     padding: 0;
     width: 100%;
-    margin-left: 110px;
+    margin-left: 30px;
 `;
 const HeaderImage = styled.div``;
 const Logo = styled.img`
     width: 100%;
-    margin-top: 20px;
-    margin-left: 30px;
 `;
 const RightContainer = styled.div`
     width: 40px;
@@ -107,6 +103,7 @@ const RightContainer = styled.div`
 const HeaderContainer = styled.h1`
     margin: 0;
     display: flex;
+    align-items: center;
 `;
 const ImageContainer = styled.img`
     display: block;

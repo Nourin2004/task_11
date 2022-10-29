@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 
-function Gifts() {
+function Rewards() {
     return (
         <>
             <Header />
@@ -15,7 +15,7 @@ function Gifts() {
     );
 }
 
-export default Gifts;
+export default Rewards;
 
 const Container = styled.div`
     display: flex;

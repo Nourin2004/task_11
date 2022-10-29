@@ -16,42 +16,42 @@ const data = [
         name: "Page A",
         Female_Guest: 250,
         Male_Guest: 300,
-        Total_Guest: 1400,
+        Total_Guest: 1300,
         amt: 2400,
     },
     {
         name: "Page B",
         Female_Guest: 200,
         Male_Guest: 250,
-        Total_Guest: 3500,
+        Total_Guest: 3000,
         amt: 2210,
     },
     {
         name: "Page C",
         Female_Guest: 250,
         Male_Guest: 300,
-        Total_Guest: 4500,
+        Total_Guest: 3500,
         amt: 2290,
     },
     {
         name: "Page D",
         Female_Guest: 250,
         Male_Guest: 300,
-        Total_Guest: 5200,
+        Total_Guest: 4200,
         amt: 2000,
     },
     {
         name: "Page E",
         Female_Guest: 250,
         Male_Guest: 310,
-        Total_Guest: 2000,
+        Total_Guest: 1500,
         amt: 2181,
     },
     {
         name: "Page F",
         Female_Guest: 240,
         Male_Guest: 320,
-        Total_Guest: 3400,
+        Total_Guest: 2400,
         amt: 2500,
     },
 ];
@@ -83,7 +83,7 @@ export default function Grapht() {
                     </GraphHead>
                     <BarChart
                         width={500}
-                        height={250}
+                        height={300}
                         data={data}
                         margin={{
                             top: 20,
@@ -97,9 +97,9 @@ export default function Grapht() {
                         {/* <YAxis /> */}
                         <Tooltip />
                         {/* <Legend /> */}
-                        <Bar dataKey="Total_Guest" stackId="a" fill="#000" />
-                        <Bar dataKey="Female_Guest" stackId="a" fill="#D2A2F7" />
                         <Bar dataKey="Male_Guest" stackId="a" fill="#A5E3E3" />
+                        <Bar dataKey="Female_Guest" stackId="a" fill="#D2A2F7" />
+                        <Bar dataKey="Total_Guest" stackId="a" fill="#000" />
                     </BarChart>
                 </BarChartBox>
             </GraphContainer>
@@ -108,8 +108,8 @@ export default function Grapht() {
 }
 
 const GraphContainer = styled.section`
-    width: 56%;
-    margin-top: 17px;
+    width: 95%;
+    margin-top: 35px;
     background-color: #fff;
     border-radius: 20px;
     text-align: center;
